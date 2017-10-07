@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 // Rutas
-
 import { app_routing } from './app.routes';
 
 // servicios
