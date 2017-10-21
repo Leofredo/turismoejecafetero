@@ -1,12 +1,11 @@
 {
     "titulo": "TURISMO EN EL EJE CAFETERO",
-    "email": "ejecafetero@hotmail.com",
-    "sitio": "https://www.leofredo-betancur.com",
+    "email": "infocompania@ejecafetero.com",
+    "sitio": "https://www.desarrollopaginasweb.com.co",
     "nombre_corto": "Leo y Alex",
-    "pagina_autor": "https://leofredo-betancur.com",
+    "pagina_autor": "https://www.desarrollopaginasweb.com.co",
     "facebook": "https://facebook.com",
     "twitter": "https://twitter.com",
-    "instagram": "https://instagram.com",
     "equipo_trabajo": [{"nombre":"Leofredo Betancur" }, {"nombre":"John Alexander Lopez"}]
 }
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<div class="ae-container-fluid ae-container-fluid--inner rk-main">
+  <div class="ae-grid">
+    <div class="ae-grid__item item-lg-6 item-lg--offset-7">
+      <h4 class="ae-u-bolder au-mb-3 conatct__title">Contacto</h4>
+      <p class="au-mb-4 contact__desc">Para mayor informacion
+        <a href="#contact-form">utiliza </a>
+        <br>El siguiente contacto</p>
+    </div>
+  </div>
+  <div class="ae-grid">
+    <div class="ae-grid__item item-lg-6">
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+<div class="ae-grid__item item-lg-6">
+  <div class="ae-grid ae-grid--collapse">
+    <div class="ae-grid__item item-lg-2 au-v-hidden au-lg-v-visible">
+      <button id="map-arrow" class="arrow-button arrow-button--nospace arrow-button--center arrow-button--flip">
+       
+      </button>
+    </div>
+    <div class="ae-grid__item item-lg-10 au-xs-ta-center au-lg-ta-left">
+      <p class="au-mb-4 contact__addr">Avenida Santander 
+        <br>Cra 23 No. 64 - 34
+        <br>Manizales Caldas</p>
+      <p>
+        <span class="contact__phone">
+          <span class="rk-light-color">Celular </span> (301) 123-4567</span>
+        <br>
+        <span class="contact__email au-block au-truncate">
+          <span class="rk-light-color">Email &nbsp;&nbsp; </span>
+          <a href="mailTo:{{ _is.info.email }}"class="rk-dark-color ">{{ _is.info.email }} </a>
+        </span>
+      </p>
+    </div>
+  </div>
+  </div>
+</div>
+

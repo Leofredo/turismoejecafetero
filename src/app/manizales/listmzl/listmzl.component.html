@@ -1,3 +1,16 @@
-<p>
-  listmzl works!
-</p>
+<table border="2">
+  <tr>
+    <td><b>Nombre del Monumento</b></td>
+    <td><b>Fecha Apertura</b></td>
+    <td><b>Ubicacion</b></td>
+    <td><b>Historia</b></td>
+  </tr>
+  <tr *ngFor="let manizales of manizalesDataService.manizalesList">
+    <td>{{manizales.nombre}}</td>
+    <td>{{manizales.fecha}}</td>
+    <td>{{ubicacionOpt[manizales.ubicacion]}}</td>
+   <td>{{manizales.historia}}</td>
+  </tr>
+</table>
+<br/>
+

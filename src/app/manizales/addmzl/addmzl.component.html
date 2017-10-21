@@ -1,3 +1,75 @@
-<p>
-  addmzl works!
-</p>
+<form #addForm="ngForm">
+    <table>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" required [(ngModel)]="manizales.nombre" name="nombre" #nombre="ngModel" />
+                    <mat-error *ngIf="!nombre.valid && !nombre.pristine">
+                        Please enter a valid monument name
+                    </mat-error>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <mat-form-field>
+                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Seleccione Fecha" 
+                    required [(ngModel)]="manizales.fecha" name="fecha" #fecha="ngModel">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-error *ngIf="!fecha.valid">
+                    Please enter a valid date
+                </mat-error>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-select placeholder="Ubicacion" required [(ngModel)]="manizales.ubicacion"
+                     name="ubicacion" #ubicacion="ngModel">
+                        <mat-option *ngFor="let ubicacionOpt of ubicacionList" [value]="ubicacionOpt.value">
+                            {{ ubicacionOpt.label }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-error *ngIf="!ubicacion.valid">
+                    Please enter a valid location
+                </mat-error>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <form class="manizales-form">
+                    <mat-form-field class="manizales-full-width">
+                        <input matInput  #message maxlength="256" 
+                         placeholder="Ingrese la Reseña Historica" required [(ngModel)]="manizales.historia" 
+                         name="historia" #historia="ngModel">
+                        <mat-hint align="start">
+                            <strong>Informacion Relevante sobre el Monumento</strong>
+                        </mat-hint>
+                        <mat-hint align="end">{{message.value.length}} / 256 </mat-hint>
+                    </mat-form-field>
+                    <mat-error *ngIf="!historia.valid && !historia.pristine">
+                        Please enter valid history
+                    </mat-error>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <br/>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" (click)="onNewManizales()">
+                        NUEVO
+                    </button>
+                    <button mat-raised-button color="primary" [disabled]="!addForm.valid" (click)="onSaveManizales()">
+                        GUARDAR
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
